@@ -1,49 +1,29 @@
 /*Question 5:Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?*/
-WITH czech_gdp AS (
+WITH yearly_gdp_per_capita AS (
     SELECT 
         year,
-        gdp
-    FROM 
-        economies
-    WHERE 
-        country = 'Czech Republic'
+        ROUND((AVG(gdp::numeric) / AVG(population))::numeric, 2) AS avg_gdp_per_capita
+    FROM t_andrii_lykhodid_project_sql_secondary_final
+    WHERE country_name = 'Czech Republic'
+      AND year BETWEEN 2006 AND 2018
+    GROUP BY year
 ),
-combined AS (
-    SELECT 
-        f.year,
-        c.gdp,
-        f.average_wage,
-        f.milk_litres,
-        f.bread_kilos,
-        LAG(c.gdp) OVER (ORDER BY f.year) AS prev_gdp,
-        LAG(f.average_wage) OVER (ORDER BY f.year) AS prev_wage,
-        LAG(f.milk_litres) OVER (ORDER BY f.year) AS prev_milk,
-        LAG(f.bread_kilos) OVER (ORDER BY f.year) AS prev_bread
-    FROM 
-        t_andrii_lykhodid_project_SQL_primary_final f
-    JOIN 
-        czech_gdp c ON f.year = c.year
-    WHERE 
-        f.industry_branch_code = 'ALL'
-),
-final AS (
-    SELECT 
+yearly_gdp_growth AS (
+    SELECT
         year,
-        ROUND(((gdp - prev_gdp) * 100.0 / prev_gdp)::numeric, 2) AS gdp_growth_pct,
-        ROUND(((average_wage - prev_wage) * 100.0 / prev_wage)::numeric, 2) AS wage_growth_pct,
-        ROUND(((milk_litres - prev_milk) * 100.0 / prev_milk)::numeric, 2) AS milk_affordability_pct,
-        ROUND(((bread_kilos - prev_bread) * 100.0 / prev_bread)::numeric, 2) AS bread_affordability_pct
-    FROM 
-        combined
-    WHERE 
-        prev_gdp IS NOT NULL
+        avg_gdp_per_capita,
+        LAG(avg_gdp_per_capita) OVER (ORDER BY year) AS prev_year_avg_gdp_per_capita,
+        ROUND(
+            ((avg_gdp_per_capita - LAG(avg_gdp_per_capita) OVER (ORDER BY year)) / 
+            NULLIF(LAG(avg_gdp_per_capita) OVER (ORDER BY year), 0)) * 100,
+            2
+        ) AS gdp_per_capita_growth_pct
+    FROM yearly_gdp_per_capita
 )
-SELECT *
-FROM final
-WHERE NOT (
-    gdp_growth_pct = 0 AND
-    wage_growth_pct = 0 AND
-    milk_affordability_pct = 0 AND
-    bread_affordability_pct = 0
-)
+SELECT
+    year,
+    avg_gdp_per_capita,
+    prev_year_avg_gdp_per_capita,
+    gdp_per_capita_growth_pct
+FROM yearly_gdp_growth
 ORDER BY year;
