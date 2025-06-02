@@ -6,6 +6,7 @@ Výzkumné otázky:
 1.Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 q1-
 ![image](https://github.com/user-attachments/assets/1b010ecc-9be4-45df-9626-77f2b34b7a7c)
+Mzdy ve většině odvětví v průběhu let rostly, s výjimkou těchto 25 příkladů.
 
 
 2.Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
