@@ -34,6 +34,6 @@ Ne, v letech 2006 až 2018 nebyl rok, kdy by ceny rostly o více než 10 % více
 q5-
 ![image](https://github.com/user-attachments/assets/e3b7aca4-eac0-455c-ab73-587e9ec60b11)
 
-Rok 2006 je počáteční rok, proto nemáme 2 sloupce s hodnotou NULL.Z dat vyplývá, že výška HDP skutečně ovlivňuje mzdy a ceny potravin, ale s různou intenzitou a časovým zpožděním. Největší dopad má HDP na mzdy (s 1-2letým zpožděním), zatímco ceny potravin jsou více ovlivněny jinimy faktory. Např. po ekonomické krize 2009 (-5,2% HDP) následoval mírný pokles mezd, ale ceny potravin nadále mírně rostly.
+Rok 2006 je počáteční rok, proto máme 2 sloupce s hodnotou NULL.Z dat vyplývá, že výška HDP skutečně ovlivňuje mzdy a ceny potravin, ale s různou intenzitou a časovým zpožděním. Největší dopad má HDP na mzdy (s 1-2letým zpožděním), zatímco ceny potravin jsou více ovlivněny jinimy faktory. Např. po ekonomické krize 2009 (-5,2% HDP) následoval mírný pokles mezd, ale ceny potravin nadále mírně rostly.
 
 
