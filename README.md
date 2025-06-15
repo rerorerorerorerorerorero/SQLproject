@@ -1,6 +1,7 @@
-Engeto-projekt
-Soubory k projektu SQL
+# Engeto-projekt
 
+## Úvod
+## Popis tvorby primární a sekundární tabulky
 ## Výzkumné otázky:
 
 **1.Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?**
