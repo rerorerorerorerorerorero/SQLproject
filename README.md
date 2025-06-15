@@ -50,7 +50,7 @@ U obou těchto dílčích výběrů jsem použil `GROUP BY`, abych data sjednoti
 
 V druhém kroku jsem pak tyto dvě připravené tabulky spojil pomocí `JOIN`, a to na základě roku. Vznikla tak finální primární tabulka obsahující přehled, který v jednom řádku spojuje mzdu v určitém odvětví a cenu konkrétní kategorie zboží ve stejném roce. Díky tomu lze sledovat, jak se vyvíjely mzdy a ceny paralelně v čase a případně je porovnávat mezi sebou.
 ### Sekundární tabulka
-Tato tabulka vznikla spojením dvou datových zdrojů: economies, kde se nachází ekonomická data jako HDP a populace, a tabulky countries, která obsahuje informace o jednotlivých státech. Propojení bylo provedeno přes název země.
+Tato tabulka vznikla spojením dvou datových zdrojů: `economies`, kde se nachází ekonomická data jako HDP a populace, a tabulky `countries`, která obsahuje informace o jednotlivých státech. Propojení bylo provedeno přes název země.
 
 Díky tomuto spojení bylo možné z každého řádku získat nejen ekonomická data, ale i informaci, jaké zemi patří, a filtrovat například podle polohy.
 
