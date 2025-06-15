@@ -66,28 +66,26 @@ Vzhledem k tomu, že výsledná sekundární tabulka měla odpovídat rozsahu le
 
 ![image](https://github.com/user-attachments/assets/1b010ecc-9be4-45df-9626-77f2b34b7a7c)
 
-Mzdy ve většině odvětví v průběhu let rostly, s výjimkou těchto 25 příkladů.
+Mzdy ve všech odvětvích mezi lety 2006 a 2018 vzrostly, s výjimkou těchto 25 příkladů.
 
 
 ### **2.Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?**
 
 ![image](https://github.com/user-attachments/assets/2ea43e4d-9b6a-47bb-a586-09f6f3b76a3b)
 
-Mzdy rostly rychleji než ceny potravin (+64 % oproti +43–50 %), což znamená, že se kupní síla těchto základních produktů za 12 let zlepšila.
-
+V roce 2006 si bylo možné za průměrnou mzdu (*) koupit 1212 kg chleba nebo 1353 litrů mléka. Mzdy rostly rychleji než ceny potravin (+64 % oproti +43–50 %), což znamená, že se kupní síla těchto základních produktů za 12 let zlepšila.
 
 ### **3.Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?**
 
 ![image](https://github.com/user-attachments/assets/3f96af8c-5eec-4e4f-8309-efa218089d7a)
 
-Tato tabulka ukazuje, které kategorie potravin zaznamenaly nejpomalejší růst cen (nejnižší roční procentuální růst). Nejméně vzrostly ceny krystalového cukru (98,08 %), následovaných jablky (99,25 %).
+Tato tabulka ukazuje, které kategorie potravin zaznamenaly nejpomalejší růst cen (nejnižší roční procentuální růst).U dvou položek z celkových 27 došlo za sledované období dokonce ke zlevnění: Cukr krystalový (98,08 %), následovaný jablky (99,25 %).
 
 ### **4.Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?**
 
 ![image](https://github.com/user-attachments/assets/894dece4-3d7e-4604-b83e-354b2ee0f4a0)
 
-Ne, v letech 2006 až 2018 nebyl rok, kdy by ceny rostly o více než 10 % více než mzda.
-
+Mezi lety 2006 - 2018 k této situaci nedošlo.
 
 ### **5.Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?**
 
