@@ -3,7 +3,7 @@ SELECT
     payroll_year,
     category_name,
     avg_salary,
-    ROUND(avg_price),
+    ROUND(avg_price, 2),
     FLOOR(avg_salary / avg_price) AS quantity
 FROM t_andrii_lykhodid_project_SQL_primary_final
 WHERE 
