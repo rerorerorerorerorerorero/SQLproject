@@ -59,7 +59,7 @@ Tato tabulka vznikla spojením dvou datových zdrojů: `economies`, kde se nach�
 
 Díky tomuto spojení bylo možné z každého řádku získat nejen ekonomická data, ale i informaci, jaké zemi patří, a filtrovat například podle polohy.
 
-Vzhledem k tomu, že výsledná sekundární tabulka měla odpovídat rozsahu let v primární tabulce, byla doplněna podmínka WHERE, která vymezuje pouze roky mezi 2006 a 2018. Tak se zajistilo, že časový rozsah sekundární tabulky je srovnatelný s tou primární a data jsou tak lépe použitelná k dalšímu porovnávání.
+Vzhledem k tomu, že výsledná sekundární tabulka měla odpovídat rozsahu let v primární tabulce, byla doplněna podmínka `WHERE`, která vymezuje pouze roky mezi **2006 a 2018**. Tak se zajistilo, že časový rozsah sekundární tabulky je srovnatelný s tou primární a data jsou tak lépe použitelná k dalšímu porovnávání.
 ## Výzkumné otázky:
 
 ### **1.Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?**
