@@ -1,6 +1,4 @@
-drop table t_andrii_lykhodid_project_sql_primary_final;
-drop table t_andrii_lykhodid_payroll;
-drop table t_andrii_lykhodid_price;
+
 CREATE TABLE t_andrii_lykhodid_payroll AS
 SELECT
     cp.payroll_year,
@@ -60,7 +58,7 @@ JOIN t_andrii_lykhodid_price prc
 
 
 SELECT * FROM t_andrii_lykhodid_project_SQL_primary_final;
-drop table t_andrii_lykhodid_project_sql_secondary_final;
+
 CREATE TABLE t_andrii_lykhodid_project_sql_secondary_final AS
 SELECT
 	c.country AS country_name,
