@@ -1,7 +1,7 @@
 Engeto-projekt
 Soubory k projektu SQL
 
-## H2Výzkumné otázky:
+## Výzkumné otázky:
 
 **1.Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?**
 q1-
