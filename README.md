@@ -32,7 +32,7 @@ Na vašem analytickém oddělení nezávislé společnosti, která se zabývá �
 
 *economies* - HDP, GINI, daňová zátěž, atd. pro daný stát a rok.
 
-### Výzkumné otázky
+### Výzkumné otázky:
 
 1. Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 2. Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
@@ -40,6 +40,11 @@ Na vašem analytickém oddělení nezávislé společnosti, která se zabývá �
 4. Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 5. Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
 
+### Anomálie v datech:
+
+`economies` -  některých zemí chybí záznamy o výši HDP a/nebo o gini koeficientu, týká se to  především Albánie a území, která jsou součástí jiných států.
+
+`czechia_price` - četnost sběru dat o cenách jídla se po roce 2008 snižovala. V roce 2008 proběhlo měření 46x za rok, v roce 2009 24x, v roce 2010 22x, od roku 2011 probíhalo měření pouze 1x měsíčně.
 ## Popis tvorby primární a sekundární tabulky
 ### Primární tabulka
 V prvním kroku jsem si připravil data ze dvou oblastí – z oblasti mezd a z oblasti cen. Pro mzdy jsem použil tabulku czechia_payroll, kterou jsem sjednotil pomocí `JOIN` s tabulkou `czechia_payroll_value_type` a `czechia_payroll_industry_branch`. Toto sjednocení mi umožnilo získat popisné informace – tedy název typu mzdy a název odvětví, ke kterému mzda patří. Klíčovou roli zde hrál filtr `value_type_code = 5958`, který zajišťuje, že pracujeme pouze s mzdou.
@@ -88,6 +93,6 @@ Ne, v letech 2006 až 2018 nebyl rok, kdy by ceny rostly o více než 10 % více
 
 ![image](https://github.com/user-attachments/assets/e3b7aca4-eac0-455c-ab73-587e9ec60b11)
 
-Rok 2006 je počáteční rok, proto máme 2 sloupce s hodnotou NULL.Z dat vyplývá, že výška HDP skutečně ovlivňuje mzdy a ceny potravin, ale s různou intenzitou a časovým zpožděním. Největší dopad má HDP na mzdy (s 1-2letým zpožděním), zatímco ceny potravin jsou více ovlivněny jinimy faktory. Např. po ekonomické krize 2009 (-5,2% HDP) následoval mírný pokles mezd, ale ceny potravin nadále mírně rostly.
+Rok 2006 je počáteční rok, proto máme 2 sloupce s hodnotou NULL.Z dat vyplývá, že výška HDP skutečně ovlivňuje mzdy a ceny potravin, ale s různou intenzitou a časovým zpožděním. Největší dopad má HDP na mzdy (s 1-2letým zpožděním), zatímco ceny potravin jsou více ovlivněny jinými faktory. Např. po ekonomické krize 2009 (-5,2% HDP) následoval mírný pokles mezd, ale ceny potravin nadále mírně rostly.
 
 
