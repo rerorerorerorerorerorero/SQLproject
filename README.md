@@ -21,7 +21,8 @@ czechia_district – Číselník okresů České republiky dle normy LAU.
 
 countries - Všemožné informace o zemích na světě, například hlavní město, měna, národní jídlo nebo průměrná výška populace.
 economies - HDP, GINI, daňová zátěž, atd. pro daný stát a rok.
-**Výzkumné otázky**
+
+### Výzkumné otázky
 
 1.Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 2.Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
