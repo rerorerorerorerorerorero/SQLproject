@@ -41,6 +41,20 @@ Na vašem analytickém oddělení nezávislé společnosti, která se zabývá �
 5. Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
 
 ## Popis tvorby primární a sekundární tabulky
+### Primární tabulka
+V prvním kroku jsem si připravil data ze dvou oblastí – z oblasti mezd a z oblasti cen. Pro mzdy jsem použil tabulku czechia_payroll, kterou jsem sjednotil pomocí `JOIN` s tabulkou `czechia_payroll_value_type` a `czechia_payroll_industry_branch`. Toto sjednocení mi umožnilo získat popisné informace – tedy název typu mzdy a název odvětví, ke kterému mzda patří. Klíčovou roli zde hrál filtr `value_type_code = 5958`, který zajišťuje, že pracujeme pouze s mzdou.
+
+Pro ceny jsem následně použil tabulku `czechia_price`, kterou jsem spojil s tabulkou `czechia_price_category`. Díky tomu jsem ke každé položce získal název kategorie a jednotku, ve které je cena uvedena. Zároveň jsem filtroval pouze ty záznamy, které nemají uveden region – tzn. že se jedná o celorepublikové průměry.
+
+U obou těchto dílčích výběrů jsem použil `GROUP BY`, abych data sjednotil podle jednotlivých let – výstupem tak byla průměrná mzda za rok a průměrná cena za rok.
+
+V druhém kroku jsem pak tyto dvě připravené tabulky spojil pomocí `JOIN`, a to na základě roku. Vznikla tak finální primární tabulka obsahující přehled, který v jednom řádku spojuje mzdu v určitém odvětví a cenu konkrétní kategorie zboží ve stejném roce. Díky tomu lze sledovat, jak se vyvíjely mzdy a ceny paralelně v čase a případně je porovnávat mezi sebou.
+### Sekundární tabulka
+Tato tabulka vznikla spojením dvou datových zdrojů: economies, kde se nachází ekonomická data jako HDP a populace, a tabulky countries, která obsahuje informace o jednotlivých státech. Propojení bylo provedeno přes název země.
+
+Díky tomuto spojení bylo možné z každého řádku získat nejen ekonomická data, ale i informaci, jaké zemi patří, a filtrovat například podle polohy.
+
+Vzhledem k tomu, že výsledná sekundární tabulka měla odpovídat rozsahu let v primární tabulce, byla doplněna podmínka WHERE, která vymezuje pouze roky mezi 2006 a 2018. Tak se zajistilo, že časový rozsah sekundární tabulky je srovnatelný s tou primární a data jsou tak lépe použitelná k dalšímu porovnávání.
 ## Výzkumné otázky:
 
 ### **1.Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?**
