@@ -73,7 +73,7 @@ Mzdy ve všech odvětvích mezi lety 2006 a 2018 vzrostly, s výjimkou těchto 2
 
 ![image](https://github.com/user-attachments/assets/2ea43e4d-9b6a-47bb-a586-09f6f3b76a3b)
 
-V roce 2006 si bylo možné za průměrnou mzdu (*) koupit 1212 kg chleba nebo 1353 litrů mléka. Mzdy rostly rychleji než ceny potravin (+64 % oproti +43–50 %), což znamená, že se kupní síla těchto základních produktů za 12 let zlepšila.
+V roce 2006 si bylo možné za průměrnou mzdu (*) koupit 1211 kg chleba nebo 1353 litrů mléka. Mzdy rostly rychleji než ceny potravin (+64 % oproti +43–50 %), což znamená, že se kupní síla těchto základních produktů za 12 let zlepšila.
 
 ### **3.Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?**
 
